@@ -8,4 +8,6 @@ uint32_t nibMasMenS(int eleccion, uint32_t val, int n);
 uint32_t nibCero(uint32_t val, int n);
 uint32_t nibValor(uint32_t val, int n, int num);
 
+uint32_t bitVar(uint32_t val, int n);
+
 #endif
