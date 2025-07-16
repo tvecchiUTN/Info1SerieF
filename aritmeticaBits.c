@@ -88,16 +88,52 @@ uint32_t nibValor(uint32_t val, int n, int num)
 //----------------------------------------------------Ejericio2-------------------------------------------------------
 
 //----------------------------------------------------Ejericio3-------------------------------------------------------
-uint32_t bitVar(uint32_t val, int n)
+uint32_t bitVar(uint32_t val, int bit)
 {
     uint32_t ret;
 
     uint32_t mask = 0x01;
-    mask = mask << n;
+    mask = mask << bit;
 
     ret = val & mask;
 
-    ret = ret >> n;
+    ret = ret >> bit;
 
     return ret;
 }
+//----------------------------------------------------Ejericio3-------------------------------------------------------
+
+//----------------------------------------------------Ejericio4-------------------------------------------------------
+void colocarUno(uint32_t *var, int bit)
+{
+    uint32_t mask = 0x01;
+    mask = mask << bit;
+
+    *var = *var | mask;
+}
+
+void colocarCero(uint32_t *var, int bit)
+{
+    uint32_t mask = 0x01;
+    mask = mask << bit;
+    mask = ~mask;
+
+    *var = *var & mask;
+}
+
+void conmutador(uint32_t *var, int bit)
+{
+    uint32_t tipo = bitVar(*var, bit);
+
+    if(tipo)
+    {
+        colocarCero(var, bit);
+    }
+    else
+    {
+        colocarUno(var, bit);
+    }
+}
+//----------------------------------------------------Ejericio4-------------------------------------------------------
+
+
