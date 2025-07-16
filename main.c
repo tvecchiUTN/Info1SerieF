@@ -4,8 +4,12 @@
 #include "binario.h"
 int main(void)
 {
-    uint32_t valor1 = 0xffffffff;
+    uint32_t valor1 = 3;
 
+    //modificBit(&valor1, 0, 1);
+
+
+    printf("%d\n", esPar(valor1));
 
     return 0;
 }

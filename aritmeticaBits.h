@@ -14,4 +14,8 @@ void colocarUno(uint32_t *var, int bit);
 void colocarCero(uint32_t *var, int bit);
 void conmutador(uint32_t *var, int bit);
 
+void modificBit(uint32_t *var, int bit, int valor);
+
+int esPar(uint32_t val);
+
 #endif
